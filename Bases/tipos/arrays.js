@@ -8,3 +8,4 @@
     const heroes = ["Spider Man", "Thor", "Iron Man", "Capitan America"];
     heroes.forEach(v => console.log(v.toUpperCase()));
 })();
+//# sourceMappingURL=arrays.js.map

@@ -1,44 +1,82 @@
-(() => {
+// Crear interfaces
 
-    // Tipos
+// Cree una interfaz para validar el auto (el valor enviado por parametro)
+interface Auto {
+  encender: boolean;
+  velocidadMaxima: number;
+  acelear(): void;
+}
 
-    const batman:string = 'Bruce';
-    const superman:string = 'Clark';
-  
-    const existe:boolean = false;
-  
-    // Tuplas
-    const parejaHeroes:[string, string] = [batman,superman];
-    const villano:[string, number, boolean] = ['Lex Lutor',5,true];
-  
-    // Arreglos
-    const aliados:string[] = ['Mujer Maravilla','Acuaman','San', 'Flash'];
-  
-    //Enumeraciones
-    enum Fuerza {
-      acuaman = 0,
-      batman = 1,
-      flash = 5,
-      superman = 100,
-    }
-    const fuerzaFlash:Fuerza = Fuerza.flash;
-    const fuerzaSuperman:Fuerza = Fuerza.superman;
-    const fuerzaBatman:Fuerza = Fuerza.batman;
-    const fuerzaAcuaman:Fuerza = Fuerza.acuaman;
-  
-    // Retorno de funciones
-    function activar_batiseñal(): string {  
-      return 'activada';
-    }
-  
-    function pedir_ayuda(): void {
-      console.log('Auxilio!!!');
-    }
-  
-    // Aserciones de Tipo
-    const poder: any = '100';
-    const largoDelPoder:number = (poder as string).length;
-    console.log( largoDelPoder );
-})()
-  
-  
+const conducirBatimovil = ( auto:Auto ):void => {
+  auto.encender = true;
+  auto.velocidadMaxima = 100;
+  auto.acelear();
+}
+
+const batimovil:Auto = {
+  encender:false,
+  velocidadMaxima:0,
+  acelear(){
+    console.log("...... gogogo!!!");
+  }
+}
+
+// Cree una interfaz con que permita utilzar el siguiente objeto
+// utilizando propiedades opcionales
+
+interface Guason {
+  reir?: boolean;
+  comer?: boolean;
+  llorar?: boolean;
+}
+
+const guason:Guason = {
+  reir: true,
+  comer:true,
+  llorar:false
+}
+
+const reir = ( guason:Guason ):void => {
+  if( guason.reir ){
+    console.log("JAJAJAJA");
+  }
+}
+
+
+// Cree una interfaz para la siguiente funcion
+
+interface CiudadGoticaFn {
+  (ciudadanos: string[]): number
+}
+
+const ciudadGotica = ( ciudadanos:string[] ):number => {
+  return ciudadanos.length;
+}
+
+// Cree una interfaz que obligue crear una clase
+// con las siguientes propiedades y metodos
+interface PersonaInterface {
+  edad: number;
+  estadoCivil: string;
+  nombre: string;
+  sexo: string;
+  imprimirBio():void;
+}
+/*
+  propiedades:
+    - nombre
+    - edad
+    - sexo
+    - estadoCivil
+    - imprimirBio(): void // en consola una breve descripcion.
+*/
+class Persona implements PersonaInterface {
+  public edad: number;
+  public estadoCivil: string;
+  public nombre: string;
+  public sexo: string;
+
+  imprimirBio() {
+    
+  }
+}

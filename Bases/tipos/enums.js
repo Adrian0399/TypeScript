@@ -10,3 +10,4 @@
     let currentAudio = AudioLevel.max;
     console.log(currentAudio);
 })();
+//# sourceMappingURL=enums.js.map
