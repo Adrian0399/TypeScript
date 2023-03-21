@@ -40,7 +40,7 @@ function readonly( isWritable: boolean = true ):Function {
         const descriptor: PropertyDescriptor = {
             get() {
                 console.log( this )
-                return 'Fernando'
+                return 'Adrian'
             },
             set( this, val ){
                 // console.log(this, val )
@@ -73,7 +73,7 @@ export class Pokemon {
 
     @CheckValidPokemonId()
     savePokemonToDB( id: number ) {
-        console.log(`Pokemon guardado en DB ${ id }`);
+        console.log(`Pokemon guardado en DataBase ${ id }`);
     }
 
 }
