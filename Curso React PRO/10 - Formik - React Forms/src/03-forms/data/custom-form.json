@@ -1,0 +1,82 @@
+[
+    {
+        "type": "input",
+        "name": "firstName",
+        "placeholder": "Ingrese su nombre",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder": "Ingrese sus apellidos",
+        "label": "Last Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "Ingrese su Email",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "required"
+            },
+            {
+                "type": "email"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [
+            {
+                "id": 1,
+                "label": "Fortnite"
+            },
+            {
+                "id": 2,
+                "label": "Apex"
+            },
+            {
+                "id": 3,
+                "label": "Fifa"
+            },
+            {
+                "id": 4,
+                "label": "COD"
+            },
+            {
+                "id": 5,
+                "label": "Forza"
+            }
+        ],
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    }
+]
